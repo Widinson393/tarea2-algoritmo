@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidad = parseInt(prompt("¿Cuántos números vas a ingresar?"));
+        let numeros = [];
+        for (let i = 0; i < cantidad; i++) {
+        let num = parseInt(prompt("Ingresa el número " + (i + 1) + ":"));
+        numeros.push(num);
+        }
+        let sumaPares = 0;
+        let sumaImpares = 0;
+        let contPares = 0;
+        let contImpares = 0;
+        for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            sumaPares = sumaPares + numeros[i];
+            contPares = contPares + 1;
+        } else {
+            sumaImpares = sumaImpares + numeros[i];
+            contImpares = contImpares + 1;
+        }
+        }
+        let promPares = 0;
+        let promImpares = 0;
+
+        if (contPares > 0) {
+        promPares = sumaPares / contPares;
+        }
+        if (contImpares > 0) {
+        promImpares = sumaImpares / contImpares;
+        }
+        alert("Promedio de números pares: " + promPares.toFixed(2) + 
+            "\nPromedio de números impares: " + promImpares.toFixed(2));
+    </script>
+</body>
+</html>

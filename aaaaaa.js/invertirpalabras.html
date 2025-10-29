@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let cantidad = parseInt(prompt("¿Cuántos productos deseas ingresar?"));
+let productos = [];
+for (let i = 0; i < cantidad; i++) {
+    let nombre = prompt(`Ingresa el nombre del producto ${i + 1}:`);
+    productos.push(nombre);
+}
+console.log("Resultados:");
+for (let producto of productos) {
+    let invertido = producto.split("").reverse().join("");
+    console.log(`"${producto}" → "${invertido}"`);
+}
+    </script>
+</body>
+</html>

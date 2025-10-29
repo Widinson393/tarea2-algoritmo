@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Ingrese la cantidad de calificaciones:"));
+        let calificaciones = [];
+        for (let i = 0; i < n; i++) {
+            let nota = parseFloat(prompt(`Ingrese la calificación ${i + 1}:`));
+            calificaciones.push(nota);
+        }
+
+        let suma = 0;
+        let contador = 0;
+        for (let i = 0; i < calificaciones.length; i++) {
+            if (calificaciones[i] >= 70) {
+                suma += calificaciones[i];
+                contador++;
+            }
+        }
+        if (contador > 0) {
+            let promedio = suma / contador;
+            alert(`Promedio de calificaciones ≥ 70: ${promedio.toFixed(2)}`);
+        } else {
+            alert("No hay calificaciones mayores o iguales a 70.");
+        }
+    </script>
+</body>
+</html>

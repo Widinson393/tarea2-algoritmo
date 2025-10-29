@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let cantidad = parseInt(prompt("¿Cuántas ciudades deseas ingresar?"));
+let ciudades = [];
+for (let i = 0; i < cantidad; i++) {
+    let ciudad = prompt(`Ingresa el nombre de la ciudad ${i + 1}:`);
+    ciudades.push(ciudad);
+    }
+let ciudadMasLarga = "";
+let longitudMaxima = 0;
+for (let ciudad of ciudades) {
+    if (ciudad.length > longitudMaxima) {
+        ciudadMasLarga = ciudad;
+        longitudMaxima = ciudad.length;
+    }
+}
+alert(`La ciudad con más letras es '${ciudadMasLarga}' (${longitudMaxima} letras).`);
+
+    </script>
+</body>
+</html>

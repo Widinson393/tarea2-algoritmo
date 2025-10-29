@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let cantidad = parseInt(prompt("¿Cuántos cargos profesionales deseas ingresar?"));
+let cargos = [];
+for (let i = 0; i < cantidad; i++) {
+    let cargo = prompt(`Ingresa el nombre del cargo profesional ${i + 1}:`);
+    cargos.push(cargo);
+}
+for (let cargo of cargos) {
+    let palabras = cargo.split(" ");
+    let iniciales = palabras.map(p => p[0].toUpperCase()).join(".") + ".";
+    alert(`"${cargo}" → ${iniciales}`);
+}
+    </script>
+</body>
+</html>

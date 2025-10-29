@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let titulo = prompt("Escribe un título:");
+        let vocal = prompt("¿Qué vocal quieres contar? (a, e, i, o, u)");
+        let contador = 0;
+        for (let i = 0; i < titulo.length; i++) {
+            if (titulo[i].toLowerCase() === vocal.toLowerCase()) {
+        contador++;
+    }
+}
+alert("La vocal '" + vocal + "' aparece " + contador + " veces en el título.");
+    </script>
+</body>
+</html>

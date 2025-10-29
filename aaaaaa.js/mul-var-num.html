@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidad = parseInt(prompt("¿Cuántos números quieres ingresar?"));
+
+        let numeros = [];
+        for (let i = 0; i < cantidad; i++) {
+        let num = parseInt(prompt("Ingresa el número " + (i + 1) + ":"));
+        numeros.push(num);
+        }
+        for (let i = 0; i < numeros.length; i++) {
+        let n = numeros[i];
+        let mensaje = "Tabla del " + n + ":\n";
+        for (let j = 1; j <= 10; j++) {
+            mensaje = mensaje + (n * j) + ", ";
+        }
+        mensaje = mensaje.slice(0, -2);
+        alert(mensaje);
+        console.log(mensaje);
+        }
+    </script>
+</body>
+</html>

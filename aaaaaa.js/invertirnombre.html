@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function invertirTexto(texto) {
+  return texto.split('').reverse().join('');
+}
+
+let producto = prompt("Ingresa el nombre del producto:");
+let invertido = invertirTexto(producto);
+
+console.log("Texto original:", producto);
+console.log("Texto invertido:", invertido);
+alert("El texto invertido es: " + invertido);
+
+    </script>
+</body>
+</html>

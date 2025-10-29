@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function obtenerIniciales(cargo) {
+  let palabras = cargo.trim().split(/\s+/);
+  let iniciales = palabras.map(p => p[0].toUpperCase()).join(".");
+  return iniciales + ".";
+}
+let cargo = prompt("Ingresa el cargo profesional:");
+let resultado = obtenerIniciales(cargo);
+
+console.log(`Cargo: ${cargo}`);
+console.log(`Iniciales: ${resultado}`);
+alert(`Las iniciales del cargo son: ${resultado}`);
+    </script>
+</body>
+</html>

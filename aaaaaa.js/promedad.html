@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidad = parseInt(prompt("¿Cuántas edades vas a ingresar?"));
+
+        let edades = [];
+        for (let i = 0; i < cantidad; i++) {
+        let edad = parseInt(prompt("Ingresa la edad " + (i + 1) + ":"));
+        edades.push(edad);
+        }
+        let sumaMayores = 0;
+        let sumaMenores = 0;
+        let contMayores = 0;
+        let contMenores = 0;
+        for (let i = 0; i < edades.length; i++) {
+        if (edades[i] >= 18) {
+            sumaMayores = sumaMayores + edades[i];
+            contMayores = contMayores + 1;
+        } else {
+            sumaMenores = sumaMenores + edades[i];
+            contMenores = contMenores + 1;
+        }
+        }
+        let promMayores = 0;
+        let promMenores = 0;
+
+        if (contMayores > 0) {
+        promMayores = sumaMayores / contMayores;
+        }
+
+        if (contMenores > 0) {
+        promMenores = sumaMenores / contMenores;
+        }
+
+        alert("Promedio de mayores de edad: " + promMayores.toFixed(2) + 
+            "\nPromedio de menores de edad: " + promMenores.toFixed(2));
+    </script>
+</body>
+</html>
